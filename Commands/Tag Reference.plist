@@ -5,7 +5,10 @@
 	<key>beforeRunningCommand</key>
 	<string>nop</string>
 	<key>command</key>
-	<string># Context-sensitive help lookup for MT tags.
+	<string>#!/usr/bin/env bash
+[[ -f "${TM_SUPPORT_PATH}/lib/bash_init.sh" ]] &amp;&amp; . "${TM_SUPPORT_PATH}/lib/bash_init.sh"
+
+# Context-sensitive help lookup for MT tags.
 # For better recognition of "mt:Foo" tag names, add ":" to your
 # word character list in TextMate's "Text Editing" preferences.
 if grep &lt;&lt;&lt;${TM_CURRENT_WORD:-!} -Esqi '^mt$'
@@ -18,15 +21,25 @@ if grep &lt;&lt;&lt;${TM_CURRENT_WORD:-!} -Esq '[a-zA-Z0-9_]+'
 fi</string>
 	<key>input</key>
 	<string>none</string>
+	<key>inputFormat</key>
+	<string>text</string>
 	<key>keyEquivalent</key>
 	<string>^h</string>
 	<key>name</key>
 	<string>Documentation for Tag</string>
-	<key>output</key>
-	<string>showAsTooltip</string>
+	<key>outputCaret</key>
+	<string>afterOutput</string>
+	<key>outputFormat</key>
+	<string>text</string>
+	<key>outputLocation</key>
+	<string>toolTip</string>
 	<key>scope</key>
 	<string>text.html.mt entity.name.tag.mt, text.html.mt variable.other.mt</string>
+	<key>semanticClass</key>
+	<string>lookup.define.html.mt</string>
 	<key>uuid</key>
 	<string>4D4EACBA-CF58-48FF-8CBC-0C93BC88AB11</string>
+	<key>version</key>
+	<integer>2</integer>
 </dict>
 </plist>
