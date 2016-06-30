@@ -239,40 +239,15 @@
 		</dict>
 		<key>php</key>
 		<dict>
-			<key>patterns</key>
-			<array>
-				<dict>
-					<key>begin</key>
-					<string>&lt;\?(php|=)?</string>
-					<key>captures</key>
-					<dict>
-						<key>0</key>
-						<dict>
-							<key>name</key>
-							<string>punctuation.section.embedded.php</string>
-						</dict>
-					</dict>
-					<key>end</key>
-					<string>\?&gt;</string>
-					<key>name</key>
-					<string>source.php.embedded.html</string>
-					<key>patterns</key>
-					<array>
-						<dict>
-							<key>include</key>
-							<string>#php-source</string>
-						</dict>
-					</array>
-				</dict>
-			</array>
-		</dict>
-		<key>php-source</key>
-		<dict>
+			<key>begin</key>
+			<string>(?=(^\s*)?&lt;\?)</string>
+			<key>end</key>
+			<string>(?!(^\s*)?&lt;\?)</string>
 			<key>patterns</key>
 			<array>
 				<dict>
 					<key>include</key>
-					<string>source.php</string>
+					<string>text.html.php</string>
 				</dict>
 			</array>
 		</dict>
