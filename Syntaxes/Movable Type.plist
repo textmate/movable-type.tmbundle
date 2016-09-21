@@ -32,29 +32,6 @@
 			<key>include</key>
 			<string>text.html.basic</string>
 		</dict>
-		<dict>
-			<key>begin</key>
-			<string>{{</string>
-			<key>captures</key>
-			<dict>
-				<key>0</key>
-				<dict>
-					<key>name</key>
-					<string>punctuation.section.embedded.smarty</string>
-				</dict>
-			</dict>
-			<key>end</key>
-			<string>}}</string>
-			<key>name</key>
-			<string>source.smarty.embedded.html</string>
-			<key>patterns</key>
-			<array>
-				<dict>
-					<key>include</key>
-					<string>source.smarty</string>
-				</dict>
-			</array>
-		</dict>
 	</array>
 	<key>repository</key>
 	<dict>
@@ -69,10 +46,6 @@
 				<dict>
 					<key>include</key>
 					<string>#ruby</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#smarty</string>
 				</dict>
 			</array>
 		</dict>
@@ -245,32 +218,6 @@
 				<dict>
 					<key>include</key>
 					<string>source.ruby</string>
-				</dict>
-			</array>
-		</dict>
-		<key>smarty</key>
-		<dict>
-			<key>begin</key>
-			<string>{{|{</string>
-			<key>captures</key>
-			<dict>
-				<key>0</key>
-				<dict>
-					<key>name</key>
-					<string>punctuation.section.embedded.smarty</string>
-				</dict>
-			</dict>
-			<key>disabled</key>
-			<string>1</string>
-			<key>end</key>
-			<string>}}|}</string>
-			<key>name</key>
-			<string>source.smarty.embedded.xhtml</string>
-			<key>patterns</key>
-			<array>
-				<dict>
-					<key>include</key>
-					<string>source.smarty</string>
 				</dict>
 			</array>
 		</dict>

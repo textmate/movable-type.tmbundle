@@ -85,10 +85,6 @@
 					<key>include</key>
 					<string>#php</string>
 				</dict>
-				<dict>
-					<key>include</key>
-					<string>#smarty</string>
-				</dict>
 			</array>
 		</dict>
 		<key>entities</key>
